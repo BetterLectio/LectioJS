@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectoJS Test</title>
+</head>
+<body>
+    <script src="./api.js"></script>
+    <script >
+
+       lectioAPI.getInstList().then((data) => {
+           console.log('getInstList:',data);
+       }).catch((err) => {
+           console.error(err);
+       });
+
+       lectioAPI.getInstData(681).then((data) => {
+           console.log('getInstData:',data);
+       }).catch((err) => {
+           console.error(err);
+       });
+
+       lectioAPI.getLoginStatus(681).then((data) => {
+           console.log('getLoginStatus:',data);
+       }).catch((err) => {
+           console.error(err);
+       });
+       
+       lectioAPI.getUserData(681).then((data) => {
+           console.log('getUserData:',data);
+       }).catch((err) => {
+           console.error(err);
+       });
+
+    //    lectioAPI.login(681,'username','password').then((data) => {
+    //        console.log('login:',data);
+    //    }).catch((err) => {
+    //        console.error(err);
+    //    });
+        
+    </script>
+</body>
+</html>
